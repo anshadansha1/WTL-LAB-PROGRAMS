@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .horizontal-snap {
+        margin: auto;
+        border: solid black 2px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scroll-snap-type: x mandatory;
+    }
+
+    .horizontal-snap>a {
+        scroll-snap-align: center;
+    }
+
+    .horizontal-snap img {
+        width: 30%;
+        object-fit: contain;
+        border-radius: 1rem;
+    }
+
+    .imgs {
+        transition: transform 0.3s ease;
+    }
+
+    .imgs:hover {
+        transform: scale(1.2);
+    }
+</style>
+ <title>Horizontal_snap</title>
+</head>
+<body> 
+ <div class="horizontal-snap"> 
+ <img src="img1.jpg" alt="img" class="imgs">
+ <img src="img1.jpg" alt="img" class="imgs">
+ <img src="img1.jpg" alt="img" class="imgs">
+ <img src="img1.jpg" alt="img" class="imgs">
+ <img src="img1.jpg" alt="img" class="imgs">
+ </div> 
+ <script>
+ document.addEventListener('contextmenu', function (event) { 
+ event.preventDefault();
+}); 
+ </script>
+</body> 
+</html>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Image Zoom and Right Click Disable</title>
+     <style>
+         .container {
+             text-align: center;
+         }
+ 
+         .zoom-image {
+             width: 300px; /* Adjust image size as needed */
+             transition: transform 0.5s;
+         }
+ 
+         .zoom-image:hover {
+             transform: scale(1.5); /* Adjust the scale factor for zoom effect */
+             cursor: zoom-in;
+         }
+     </style>
+ </head>
+ <body oncontextmenu="return false;">
+     <div class="container">
+         <img src="p1_3.jpg" alt="Image" class="zoom-image">
+         <img src="p1_3.jpg" alt="Image" class="zoom-image">
+         <img src="p1_3.jpg" alt="Image" class="zoom-image">
+     </div>
+
+     <!--  To disable the default right-click behavior on the webpage. -->
+     <script>
+         document.addEventListener('contextmenu', function(e) {
+             e.preventDefault();
+         });
+     </script>
+ </body>
+ </html>

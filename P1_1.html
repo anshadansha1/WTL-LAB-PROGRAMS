@@ -1,0 +1,40 @@
+<!--Write a program using HTML and CSS, creating a horizontally scrollable
+container that will snap on elements when scrolling.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .horizontal-snap {
+        margin: auto;
+        border: solid black 2px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scroll-snap-type: x mandatory;
+    }
+
+    .horizontal-snap>a {
+        scroll-snap-align: center;
+    }
+
+    .horizontal-snap img {
+        width: 30%;
+        object-fit: contain;
+        border-radius: 1rem;
+    }
+ </style>
+ <title>Horizontal_snap</title>
+</head>
+<body> 
+ <div class="horizontal-snap"> 
+ <img src="p1_1.jpg" alt="img">
+ <img src="p1_1.jpg" alt="img">
+ <img src="p1_1.jpg" alt="img">
+ <img src="p1_1.jpg" alt="img">
+ <img src="p1_1.jpg" alt="img">
+ </div> 
+</body> 
+</html>
+
