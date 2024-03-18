@@ -1,0 +1,31 @@
+<!--Write a JavaScript program to sort the items of an array.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Array</title>
+</head>
+<body>
+
+<label for="inputValues">Enter comma-separated values:</label>
+<input type="text" id="inputValues">
+<button onclick="sortArray()">Sort Array</button>
+
+<p id="arrayValues"></p>
+
+<script>
+    function sortArray() {
+        // Get the input value from the textbox
+        var input = document.getElementById("inputValues").value;
+        // Split the input string into an array
+        var items = input.split(",");
+        // Sort the array
+        items.sort();
+        // Display the sorted array
+        document.getElementById("arrayValues").innerHTML = "Sorted Array: " + items.join(", ");
+    }
+</script>
+
+</body>
+</html>

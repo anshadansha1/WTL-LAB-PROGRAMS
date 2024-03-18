@@ -1,0 +1,46 @@
+<!--Implement a JavaScript program to change the background color randomly-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Color</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body id="body">
+
+<p>Click anywhere to change the background color randomly.</p>
+
+<script>
+    // Function to generate a random RGB color
+    function getRandomColor() {
+        var r = Math.floor(Math.random() * 256); // Random red value between 0 and 255
+        var g = Math.floor(Math.random() * 256); // Random green value between 0 and 255
+        var b = Math.floor(Math.random() * 256); // Random blue value between 0 and 255
+        return `rgb(${r}, ${g}, ${b})`; // Return the RGB color string
+    }
+
+    // Function to change the background color randomly
+    function changeBackgroundColor() {
+        var body = document.getElementById("body"); // Get the body element
+        var randomColor = getRandomColor(); // Get a random color
+        body.style.backgroundColor = randomColor; // Set the background color of the body
+    }
+
+    // Add event listener to change the background color when the document is clicked
+    document.addEventListener("click", changeBackgroundColor);
+</script>
+
+</body>
+</html>

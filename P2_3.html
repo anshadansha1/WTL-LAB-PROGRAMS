@@ -1,0 +1,32 @@
+<!--Write a program to implement Email Validation in JavaScript.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <script>
+        function validateEmail() {
+            // Get the email input value
+            var email = document.getElementById("email").value;
+
+            // Regular expression for email validation
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Test if the email matches the regular expression
+            if (regex.test(email)) {
+                alert("Valid email address.");
+            } else {
+                alert("Invalid email address. Please enter a valid email.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+<label for="email">Email:</label>
+<input type="text" id="email" name="email">
+<button onclick="validateEmail()">Validate Email</button>
+
+</body>
+</html>

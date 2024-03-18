@@ -1,0 +1,36 @@
+<!--Write a JavaScript program to construct the pyramid pattern, using a nested
+for loop.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid Pattern</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // Define the height of the pyramid
+    var height = 5;
+    // Outer loop for rows
+    for (var i = 1; i <= height; i++) {
+        // Inner loop for spaces
+        for (var j = height - i; j > 0; j--) {
+            document.write("&nbsp;"); // Output space
+        }
+        // Inner loop for stars
+        for (var k = 1; k <= 2 * i - 1; k++) {
+            document.write("* "); // Output star
+        }
+        document.write("<br>"); // Output newline
+    }
+</script>
+
+</body>
+</html>

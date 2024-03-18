@@ -1,0 +1,34 @@
+<!--Write a program to Toggle Password Visibility in JavaScript.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Visibility Toggle</title>
+</head>
+<body>
+
+<label for="password">Password:</label>
+<input type="password" id="password">
+<input type="checkbox" id="toggleCheckbox" onclick="togglePasswordVisibility()">
+<label for="toggleCheckbox">Show Password</label>
+
+<script>
+    function togglePasswordVisibility() {
+        // Get the password input element and the toggle checkbox
+        var passwordInput = document.getElementById("password");
+        var toggleCheckbox = document.getElementById("toggleCheckbox");
+
+        // Check if the checkbox is checked
+        if (toggleCheckbox.checked) {
+            // If checked, set the type of the password input to "text" to show the password
+            passwordInput.type = "text";
+        } else {
+            // If not checked, set the type of the password input back to "password" to hide the password
+            passwordInput.type = "password";
+        }
+    }
+</script>
+
+</body>
+</html>

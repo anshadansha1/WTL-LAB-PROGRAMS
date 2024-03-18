@@ -1,0 +1,44 @@
+<!--Write a JavaScript function that accepts a string as a parameter and counts
+the number of vowels within the string-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Vowels</title>
+</head>
+<body>
+
+<label for="inputString">Enter a string:</label>
+<input type="text" id="inputString">
+<button onclick="countVowels()">Count Vowels</button>
+
+<p id="result"></p>
+
+<script>
+    function countVowels() {
+        // Get the input string
+        var inputString = document.getElementById("inputString").value.toLowerCase(); // Convert to lowercase for case-insensitive counting
+
+        // Define an array containing the vowels
+        var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+        // Initialize a variable to count the number of vowels
+        var vowelCount = 0;
+
+        // Loop through each character in the input string
+        for (var i = 0; i < inputString.length; i++) {
+            // Check if the current character is a vowel
+            if (vowels.includes(inputString[i])) {
+                // If it's a vowel, increment the vowel count
+                vowelCount++;
+            }
+        }
+
+        // Display the result
+        document.getElementById("result").textContent = "Number of vowels: " + vowelCount;
+    }
+</script>
+
+</body>
+</html>
