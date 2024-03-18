@@ -1,0 +1,44 @@
+<!--Write a program to demonstrate the Fibonacci sequence in JSON.
+JSON : JavaScript Object Notation
+JavaScript has a built in function for converting JSON strings into JavaScript objects: "JSON.parse()
+JavaScript also has a built in function for converting an object into a JSON string: "JSON.stringify()"
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Sequence in JSON</title>
+</head>
+<body>
+
+<label for="fibonacciCount">Enter the number of Fibonacci numbers:</label>
+<input type="number" id="fibonacciCount"><br>
+<button onclick="generateFibonacciJSON()">Generate Fibonacci Sequence</button>
+
+<p id="fibonacciOutput"></p>
+
+<script>
+    // Function to generate the Fibonacci sequence and return it as a JSON string
+    function generateFibonacciJSON() {
+        var fibonacciCount = parseInt(document.getElementById("fibonacciCount").value);
+        
+        if (isNaN(fibonacciCount) || fibonacciCount <= 0) {
+            document.getElementById("fibonacciOutput").textContent = "Please enter a valid positive integer.";
+            return;
+        }
+        
+        var fibonacciSequence = [0, 1];
+        
+        for (var i = 2; i < fibonacciCount; i++) {
+            fibonacciSequence.push(fibonacciSequence[i - 1] + fibonacciSequence[i - 2]);
+        }
+        
+        var fibonacciJSON = JSON.stringify(fibonacciSequence);
+        document.getElementById("fibonacciOutput").textContent = "Fibonacci Sequence (JSON): " + fibonacciJSON;
+    }
+</script>
+
+</body>
+</html>
